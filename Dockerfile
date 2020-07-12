@@ -1,6 +1,6 @@
 FROM raspbian/stretch:latest
 
-MAINTAINER Zane Claes <zane@technicallywizardry.com>
+MAINTAINER Glenn Farrell <glenn@michelleandglenn.com>
 
 USER root
 
@@ -15,7 +15,7 @@ RUN pip3 install --upgrade prometheus_client pyserial
 # TEMP fix for Raspberry Pi speed
 RUN apt-get -yqq update && \
     apt-get -yqq --no-install-recommends install git
-RUN git clone https://github.com/zaneclaes/python-OBD.git && \
+RUN git clone https://github.com/traindriverrev/python-OBD.git && \
     cd python-OBD && \
     git checkout zkc-send-speed && \
     pip3 install -e ./
